@@ -1,0 +1,256 @@
+[
+  {
+    "responseMessage": null,
+    "execQueueSeqId": "890B35AA-889B-AAE5-6A34-83BEABE3E347",
+    "videoId": "202209010001",
+    "taskItem": "archive",
+    "execStatus": "complete",
+    "execStartTime": "2022-12-27T17:05:00",
+    "execEndTime": "2022-12-27T17:06:08",
+    "uncPathname": "\\\\10.227.63.205",
+    "filePath": "\\nearline_archive_02",
+    "errorMessage": null,
+    "createQueueBy": "system",
+    "createQueueTime": "2022-12-23T16:51:35",
+    "rowVersion": "2022-12-27T17:06:07",
+    "archiveLogs": [
+      {
+        "seqId": "902790F9-2CC7-4085-98BC-0635A8B8B9B4",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:01",
+        "execEndTime": "2022-12-27T17:05:01",
+        "taskDesc": "01.檢查 Online [待歸檔區] 影片資料夾是否存在？",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:01"
+      },
+      {
+        "seqId": "B7BBBF39-7C05-CBE5-8C2C-D3A3CAC64BB5",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:06",
+        "execEndTime": "2022-12-27T17:05:07",
+        "taskDesc": "08.複製 Online [待歸檔區]_low_res.mp4 影音檔案複製至[低解析影音檔專區] \\\\10.227.63.205\\low_resolution_01\\202209\\20220901\\202209010001。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:07"
+      },
+      {
+        "seqId": "F5D3D5AB-C8DB-B6CB-5D1C-439C8D4721CB",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:07",
+        "execEndTime": "2022-12-27T17:05:08",
+        "taskDesc": "09.刪除 Online [待歸檔區] 來源檔\\\\10.227.63.205\\archive_source\\202209010001。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:07"
+      },
+      {
+        "seqId": "C3D21FFF-3519-0643-999F-40AEA8A27AC3",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:06",
+        "execEndTime": "2022-12-27T17:05:06",
+        "taskDesc": "07.更新影片實長及素材檔案資料。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:06"
+      },
+      {
+        "seqId": "8B4AC43F-FB94-7BEF-B6EA-848ED7F025C2",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:02",
+        "execEndTime": "2022-12-27T17:05:06",
+        "taskDesc": "05.複製檔案(Online [待歸檔區] \\\\10.227.63.205\\archive_source\\202209010001 至 Near Line [歸檔區] \\\\10.227.63.205\\nearline_archive_02\\202209\\20220901\\202209010001)。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:05"
+      },
+      {
+        "seqId": "955FAA6E-5B94-9EBC-B43B-F8D453492F16",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:01",
+        "execEndTime": "2022-12-27T17:05:02",
+        "taskDesc": "03.檢查 Online [待歸檔區] 檔案大小是否為零？",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:01"
+      },
+      {
+        "seqId": "38B8CCE6-723C-2530-1A0A-ADD84CFB16A9",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:01",
+        "execEndTime": "2022-12-27T17:05:01",
+        "taskDesc": "02.檢查 Online [待歸檔區] 主要影音檔是否存在？",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:01"
+      },
+      {
+        "seqId": "51539AB8-068C-8D76-F723-326B3D73F393",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:06",
+        "execEndTime": "2022-12-27T17:05:06",
+        "taskDesc": "06.更新儲存空間(NearLineDiskSpaceRec)。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:05"
+      },
+      {
+        "seqId": "5DB27D1A-EF58-B27F-37CC-B81E293D4405",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:05:02",
+        "execEndTime": "2022-12-27T17:05:02",
+        "taskDesc": "04.取得 Near Line [歸檔區] 儲存位置。",
+        "errorMessage": "[YTMAM_FS-82]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-23T16:51:35",
+        "rowVersion": "2022-12-27T17:05:02"
+      }
+    ]
+  },
+  {
+    "responseMessage": null,
+    "execQueueSeqId": "FA051ACC-20F1-C216-B952-6EF34E3CEDCC",
+    "videoId": "202209010001",
+    "taskItem": "archive",
+    "execStatus": "complete",
+    "execStartTime": "2022-12-27T17:15:00",
+    "execEndTime": "2022-12-27T17:16:07",
+    "uncPathname": "\\\\10.227.63.205",
+    "filePath": "\\nearline_archive_02",
+    "errorMessage": null,
+    "createQueueBy": "system",
+    "createQueueTime": "2022-12-27T17:05:06",
+    "rowVersion": "2022-12-27T17:16:06",
+    "archiveLogs": [
+      {
+        "seqId": "C15A6981-375D-C1D7-8EA0-E045755EC86A",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:07",
+        "execEndTime": "2022-12-27T17:15:07",
+        "taskDesc": "09.刪除 Online [待歸檔區] 來源檔\\\\10.227.63.205\\archive_source\\202209010001。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:06"
+      },
+      {
+        "seqId": "FB027DD5-2609-347D-69CB-3E0DD1D854A3",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:00",
+        "execEndTime": "2022-12-27T17:15:01",
+        "taskDesc": "03.檢查 Online [待歸檔區] 檔案大小是否為零？",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:00"
+      },
+      {
+        "seqId": "B6FA3272-0D99-93BB-52C8-D83D57DBD0ED",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:00",
+        "execEndTime": "2022-12-27T17:15:00",
+        "taskDesc": "02.檢查 Online [待歸檔區] 主要影音檔是否存在？",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:00"
+      },
+      {
+        "seqId": "1F1C14E1-C251-092A-8538-73021A21B890",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:01",
+        "execEndTime": "2022-12-27T17:15:01",
+        "taskDesc": "04.取得 Near Line [歸檔區] 儲存位置。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:01"
+      },
+      {
+        "seqId": "88938DEB-1E5F-316C-8A3A-2C2E8A88659F",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:03",
+        "execEndTime": "2022-12-27T17:15:03",
+        "taskDesc": "04.R2.刪除 Near Line [歸檔區] 已資源回收檔案\\\\10.227.63.205\\nearline_archive_02\\202209\\20220901\\202209010001。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:03"
+      },
+      {
+        "seqId": "C25C80B0-3704-A1E0-09F5-4CB0DA9DF428",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:00",
+        "execEndTime": "2022-12-27T17:15:00",
+        "taskDesc": "01.檢查 Online [待歸檔區] 影片資料夾是否存在？",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:00"
+      },
+      {
+        "seqId": "4C424C86-F280-0DC0-58DF-39B6C0379A28",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:05",
+        "execEndTime": "2022-12-27T17:15:05",
+        "taskDesc": "06.更新儲存空間(NearLineDiskSpaceRec)。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:05"
+      },
+      {
+        "seqId": "FD69FB29-BB38-6345-ABA2-9C3A6C9F977B",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:03",
+        "execEndTime": "2022-12-27T17:15:05",
+        "taskDesc": "05.複製檔案(Online [待歸檔區] \\\\10.227.63.205\\archive_source\\202209010001 至 Near Line [歸檔區] \\\\10.227.63.205\\nearline_archive_02\\202209\\20220901\\202209010001)。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:05"
+      },
+      {
+        "seqId": "03BC141A-C476-CCF0-3FEE-DE803B339D13",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:01",
+        "execEndTime": "2022-12-27T17:15:03",
+        "taskDesc": "04.R1.資源回收處理:\\\\10.227.63.205\\nearline_archive_02\\202209\\20220901\\202209010001 至 \\\\10.227.63.205\\recycle\\202209010001_20221227171501。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:03"
+      },
+      {
+        "seqId": "60031235-67F9-99CF-0C47-1AA3584CC417",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:06",
+        "execEndTime": "2022-12-27T17:15:07",
+        "taskDesc": "08.複製 Online [待歸檔區]_low_res.mp4 影音檔案複製至[低解析影音檔專區] \\\\10.227.63.205\\low_resolution_01\\202209\\20220901\\202209010001。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:06"
+      },
+      {
+        "seqId": "285D6351-29D1-3344-003A-B49979BA5BE3",
+        "execStatus": "complete",
+        "execStartTime": "2022-12-27T17:15:05",
+        "execEndTime": "2022-12-27T17:15:06",
+        "taskDesc": "07.更新影片實長及素材檔案資料。",
+        "errorMessage": "[YTMAM_FS-145]",
+        "createQueueBy": "system",
+        "createQueueTime": "2022-12-27T17:05:06",
+        "rowVersion": "2022-12-27T17:15:05"
+      }
+    ]
+  }
+]
