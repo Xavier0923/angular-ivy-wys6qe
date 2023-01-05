@@ -1,5 +1,5 @@
 table {
-  width: 100%;
+  max-width: 800px;
 }
 
 tr.example-detail-row {
@@ -8,9 +8,8 @@ tr.example-detail-row {
 
 .example-element-diagram {
   min-width: 80px;
-  border: 2px solid black;
-  padding: 8px;
+  padding: 16px;
   font-weight: lighter;
-  margin: 8px 0;
-  height: 104px;
+  max-height: 300px;
+  overflow: auto;
 }
