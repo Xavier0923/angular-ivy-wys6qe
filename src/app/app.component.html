@@ -98,7 +98,7 @@
       >
         <div class="example-element-diagram">
           <mat-card *ngFor="let item of element.archiveLogs">
-            <mat-grid-list cols="2" gutterSize="5" rowHeight="6:1">
+            <!-- <mat-grid-list cols="2" gutterSize="5" rowHeight="6:1">
               <mat-grid-tile style="border: 1px solid #fff;border-radius:15px;"
                 ><p>作業內容 :</p>
                 <p style="margin-right:10px;">
@@ -126,10 +126,10 @@
                 style="display:block;word-break: break-word;width:100%;"
                 >錯誤訊息 : {{ item.errorMessage }}</mat-grid-tile
               >
-            </mat-grid-list>
+            </mat-grid-list> -->
           </mat-card>
 
-          <!-- <div *ngFor="let item of element.archiveLogs">
+          <div *ngFor="let item of element.archiveLogs">
             <p>作業內容 : {{ item.taskDesc }}</p>
             <p>作業時間 : {{ item.execStartTime }} ~ {{ item.execEndTime }}</p>
             <p style="display:flex;align-item: center;">
@@ -150,7 +150,7 @@
               錯誤訊息 : {{ item.errorMessage }}
             </p>
             <mat-divider></mat-divider>
-          </div> -->
+          </div>
         </div>
       </div>
     </td>
@@ -168,6 +168,20 @@
   [pageSizeOptions]="[5, 10, 25, 100]"
   aria-label="Select page of users"
 ></mat-paginator>
-<mat-chip style="background:green;"
-  ><mat-icon matChipAvatar>check</mat-icon>Success</mat-chip
->
+<mat-chip-listbox>
+  <mat-chip style="background:green;height:20px;"
+    ><mat-icon matChipAvatar>check</mat-icon>Success</mat-chip
+  >
+  <mat-chip style="background:blue;height:20px;"
+    ><mat-icon matChipAvatar>check</mat-icon>Wait</mat-chip
+  >
+  <mat-chip style="background:red;height:20px;"
+    ><mat-icon matChipAvatar>check</mat-icon>Fail</mat-chip
+  >
+  <mat-chip style="background:orange;height:20px;"
+    ><mat-icon matChipAvatar>check</mat-icon>Process</mat-chip
+  >
+  <mat-chip style="background:gray;height:20px;"
+    ><mat-icon matChipAvatar>check</mat-icon>Pause</mat-chip
+  >
+</mat-chip-listbox>
