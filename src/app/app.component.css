@@ -13,3 +13,9 @@ tr.example-detail-row {
   max-height: 300px;
   overflow: auto;
 }
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}

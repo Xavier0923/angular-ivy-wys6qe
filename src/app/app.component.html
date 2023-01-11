@@ -15,8 +15,8 @@
       {{ element.videoId }}
     </td>
   </ng-container>
-  <ng-container matColumnDef="execStatus">
-    <th mat-header-cell *matHeaderCellDef>處理狀態</th>
+  <ng-container matColumnDef="taker">
+    <th mat-header-cell *matHeaderCellDef>執行者</th>
     <td
       mat-cell
       *matCellDef="let element"
@@ -28,8 +28,8 @@
       {{ element.execStatus }}
     </td>
   </ng-container>
-  <ng-container matColumnDef="execStartTime">
-    <th mat-header-cell *matHeaderCellDef>作業開始時間</th>
+  <ng-container matColumnDef="process">
+    <th mat-header-cell *matHeaderCellDef>處理狀態</th>
     <td
       mat-cell
       *matCellDef="let element"
@@ -41,8 +41,8 @@
       {{ element.execStartTime }}
     </td>
   </ng-container>
-  <ng-container matColumnDef="execEndTime">
-    <th mat-header-cell *matHeaderCellDef>作業結束時間</th>
+  <ng-container matColumnDef="createQueueTime">
+    <th mat-header-cell *matHeaderCellDef>排程建置時間</th>
     <td
       mat-cell
       *matCellDef="let element"
@@ -54,8 +54,8 @@
       {{ element.execEndTime }}
     </td>
   </ng-container>
-  <ng-container matColumnDef="uncPathname">
-    <th mat-header-cell *matHeaderCellDef>路徑</th>
+  <ng-container matColumnDef="execQueueTime">
+    <th mat-header-cell *matHeaderCellDef>執行時間</th>
     <td
       mat-cell
       *matCellDef="let element"
@@ -66,6 +66,30 @@
     >
       {{ element.uncPathname + element.filePath }}
     </td>
+  </ng-container>
+  <ng-container matColumnDef="nearlineFilePath">
+    <th mat-header-cell *matHeaderCellDef>歸檔全路徑</th>
+    <td
+      mat-cell
+      *matCellDef="let element"
+      (click)="
+        expandedElement = expandedElement === element ? null : element;
+        $event.stopPropagation()
+      "
+    >
+      {{ element.uncPathname + element.filePath }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="feature">
+    <th mat-header-cell *matHeaderCellDef>功能</th>
+    <td
+      mat-cell
+      *matCellDef="let element"
+      (click)="
+        expandedElement = expandedElement === element ? null : element;
+        $event.stopPropagation()
+      "
+    ></td>
   </ng-container>
   <ng-container matColumnDef="expand">
     <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
@@ -85,7 +109,7 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="expandedDetail">
+  <!-- <ng-container matColumnDef="expandedDetail">
     <td
       style="padding: 0;"
       mat-cell
@@ -97,38 +121,6 @@
         [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'"
       >
         <div class="example-element-diagram">
-          <mat-card *ngFor="let item of element.archiveLogs">
-            <!-- <mat-grid-list cols="2" gutterSize="5" rowHeight="6:1">
-              <mat-grid-tile style="border: 1px solid #fff;border-radius:15px;"
-                ><p>作業內容 :</p>
-                <p style="margin-right:10px;">
-                  {{ item.taskDesc }}
-                </p></mat-grid-tile
-              >
-              <mat-grid-tile style="border: 1px solid #fff;border-radius:15px;"
-                >作業時間 : {{ item.execStartTime }} ~
-                {{ item.execEndTime }}</mat-grid-tile
-              >
-              <mat-grid-tile style="border: 1px solid #fff;border-radius:15px;"
-                >執行狀態 :
-                <mat-icon
-                  *ngIf="item.execStatus === 'complete'"
-                  style="color:green;"
-                  >done</mat-icon
-                >
-                <mat-icon *ngIf="item.execStatus === 'fail'" style="color:red;"
-                  >close</mat-icon
-                >
-              </mat-grid-tile>
-              <mat-grid-tile
-                style="border: 1px solid #fff;border-radius:15px;"
-                *ngIf="item.execStatus === 'fail'"
-                style="display:block;word-break: break-word;width:100%;"
-                >錯誤訊息 : {{ item.errorMessage }}</mat-grid-tile
-              >
-            </mat-grid-list> -->
-          </mat-card>
-
           <div *ngFor="let item of element.archiveLogs">
             <p>作業內容 : {{ item.taskDesc }}</p>
             <p>作業時間 : {{ item.execStartTime }} ~ {{ item.execEndTime }}</p>
@@ -154,7 +146,7 @@
         </div>
       </div>
     </td>
-  </ng-container>
+  </ng-container> -->
 
   <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
   <tr mat-row *matRowDef="let row; columns: columnsToDisplayWithExpand"></tr>
@@ -169,19 +161,26 @@
   aria-label="Select page of users"
 ></mat-paginator>
 <mat-chip-listbox>
-  <mat-chip style="background:green;height:20px;"
-    ><mat-icon matChipAvatar>check</mat-icon>Success</mat-chip
-  >
-  <mat-chip style="background:blue;height:20px;"
-    ><mat-icon matChipAvatar>check</mat-icon>Wait</mat-chip
-  >
-  <mat-chip style="background:red;height:20px;"
-    ><mat-icon matChipAvatar>check</mat-icon>Fail</mat-chip
-  >
-  <mat-chip style="background:orange;height:20px;"
-    ><mat-icon matChipAvatar>check</mat-icon>Process</mat-chip
-  >
-  <mat-chip style="background:gray;height:20px;"
-    ><mat-icon matChipAvatar>check</mat-icon>Pause</mat-chip
-  >
+  <mat-chip style="background:green;height:20px;">Success</mat-chip>
+  <mat-chip style="background:blue;height:20px;">Wait</mat-chip>
+  <mat-chip style="background:red;height:20px;">Fail</mat-chip>
+  <mat-chip style="background:orange;height:20px;">Process</mat-chip>
+  <mat-chip style="background:gray;height:20px;">Pause</mat-chip>
 </mat-chip-listbox>
+<div class="example-flex-container">
+  <button mat-icon-button>
+    <mat-icon style="color:green;font-size:30px;width:30px;height:30px;"
+      >play_circle</mat-icon
+    >
+  </button>
+  <button mat-icon-button>
+    <mat-icon style="color:red;font-size:30px;width:30px;height:30px;"
+      >pause_circle</mat-icon
+    >
+  </button>
+  <button mat-icon-button>
+    <mat-icon style="color:gray;font-size:30px;width:30px;height:30px;"
+      >cancel</mat-icon
+    >
+  </button>
+</div>
